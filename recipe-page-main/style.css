@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+:root {
+    --main-bg: hsl(0, 0%, 100%);
+    --sub-bg: hsl(330, 100%, 98%);
+    --heading1: hsl(24, 5%, 18%);
+    --heading2: hsl(30, 10%, 34%);
+    --heading3: hsl(332, 51%, 32%);
+    --text: hsl(30, 18%, 87%);
+    --text2: hsl(30, 54%, 90%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    font-size: clamp(16px, 1vw + 16px, 3vw);
+    color: var(--heading2);
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text2);
+    @media (width>=60em) {
+        padding: 2.5em 0;
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin: 1em 0;
+    line-height: 1;
+}
+
+h1 {
+    font-family: "Young Serif", serif;
+    color: var(--heading1);
+    font-size: clamp(2rem, 2vw + 1rem, 5rem);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Young Serif", serif;
+    color: var(--heading2);
+    font-size: clamp(1.75rem, 2vw + 1rem, 4rem);
+    font-weight: 700;
+}
+
+h3 {
+    color: var(--heading3);
+    font-size: clamp(1.5rem, 2vw + 1rem, 4rem);
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    min-width: 375px;
+    max-width: 1440px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1em; */
+    @media (width>=60em) {
+        border-radius: 2em;
+        padding: 3em 2em;
+    }
+}
+
+header img {
+    @media (width>=60em) {
+        border-radius: 1em;
+    }
+}
+
+main {
+    padding: 1em;
+}
+
+.preparation-time {
+    margin: 2em 0;
+    padding: 1em 1.5em;
+    background-color: var(--sub-bg);
+    border-radius: 1em;
+}
+
+.preparation-time ul {
+    /* list-style: circle; */
+    margin-left: 2em;
+    padding-left: 1em;
+}
+
+li span {
+    font-weight: 600;
+}
+
+.ingredients ul {
+    padding: 0 0 2em 2em;
+}
+
+.instructions {
+    padding: 0 0 2em 2em;
+}
+
+.instructions li {
+    margin-bottom: 1em;
+}
+
+.nutrition div {
+    display: flex;
+    justify-content: space-around;
+    margin: 1em;
+    align-items: center;
+    border-bottom: 1px solid var(--heading2);
+}
+
+.nutrition div p:nth-child(2) {
+    font-weight: 700;
+}
